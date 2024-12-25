@@ -1,9 +1,9 @@
 
-# Simple Password PDF Text Extractor
+# Simple PDF Text Extractor
 
 ## Overview
 
-The Password PDF Text Extractor is a simple tool designed to extract text from password-protected PDFs. It prompts the user to input the password securely and outputs the extracted text into a specified file.
+Simple tool designed to extract text from standard or password-protected PDFs. Prompts the user to input the password securely or press **Enter** if there is no password. It then outputs the extracted text into a specified file or directory of the users choice.
 
 ## Prerequisites
 
@@ -39,15 +39,20 @@ The Password PDF Text Extractor is a simple tool designed to extract text from p
 
 ## Usage
 
-To use the tool, run the following command in your terminal or command prompt:
+- **With directory**
 
-```bash
-python extractor.py -i "PATH\TO\FILE.pdf" -o "EXAMPLE_FILE.txt"
+```python
+python extractor.py -i '.\path\to\file.pdf' -o '.\path\to\output.txt'
+```
+
+- **Without directory**
+
+```python
+python extractor.py -i '.\file.pdf' -o 'output.txt'
+
 ```
 
 ### Command Line Arguments
 
 - `-i`, `--input`: Path to the input PDF file.
 - `-o`, `--output`: Path to the output text file.
-
-Upon execution, you will be prompted to enter the password for the PDF securely.

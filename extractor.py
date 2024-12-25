@@ -57,7 +57,7 @@ def main():
     args = parser.parse_args()
 
     # Prompt user for password securely using getpass
-    pdf_password = getpass.getpass(prompt='Enter PDF password: ')
+    pdf_password = getpass.getpass(prompt='Enter PDF password or press ENTER if there is no password: ')
 
     # Extract text from the specified PDF using provided password
     text_list = extract_text_from_pdf(args.input, pdf_password)
